@@ -2,10 +2,6 @@
 
 A website for password analysis, generation, and small cyber hygiene education.
 
-# CAUTION:
-
-Use the link https://takkyyon.github.io/Password-Generator/home.html for it to work
-
 ## Features
 
 ### 1. Home Page: Password Analysis
