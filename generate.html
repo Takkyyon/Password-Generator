@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+            <div class="logocontainer">
+                <a id="logo" href="home.html">Password Generator</a>
+                <button id="logoblinker"></button>
+            </div>
+            <a class="fa-solid fa-bars" id="barlinks"></a>
+            <ul class="navlinks">
+                <a class="navlink" id="homelink" href="home.html">Home</a>
+                <a class="navlink" id="generatelink" href="generate.html">Generate</a>
+                <a class="navlink" id="cyberhygienelink" href="cyberhygiene.html">Cyber_Hygiene</a>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <div class="genpasscontainer">
+            <div class="genpassintro">
+                <img id='genpassintroimg' src="passgen_directory/generatehtmlintro.jpg" alt="Cyber Security Image">
+                <p id="genpassintrotext">Having a strong password is key to
+                securing all of your important information. If you have a weak
+                password and want a stronger one, generate a unique or
+                customized strong password below.</p>
+            </div>
+            <div class="genpassgeneratecontainer">
+                <p id="genpassgeneratetitle">Generate a password:</p>
+                <div class="genpassinstruction">
+                    <p id="genpassinstructiontitle">Instructions:</p>
+                    <p id="genpassinstructioninfo">
+                    <br>Simply click the "Generate" button to create a unique
+                    password. If you're satisfied with the generated password,
+                    click the "Copy" button to copy it.<br><br><br>Control the
+                    Generated Password:<br>You can customize the password by
+                    toggling the green checkboxes at the bottom-right of the UI
+                    to enable or disable specific character types. A slider in
+                    the middle of the UI lets you adjust the length of the
+                    generated password.<br><br>Custom Text and Placement:<br>To
+                    add custom text, type it into the custom text input field at
+                    the bottom-left of the UI. You can then choose where the
+                    text appears in the generated password by clicking the
+                    button below the custom text input field.
+                    </p>
+                </div>
+                <div class="genpassgenerateui">
+                    <div class="generatepassgenerated">
+                        <div class="generatepassoutputbar">
+                            <p id="generatepassoutputtext">G3nera7ed_p@ssword_go3s_H3re.</p>
+                            <button id="generatepassoutputblinker"></button>
+                        </div>
+                        <div class="generatepassgeneratedbutton">
+                            <button id="generatepassgenerate">Generate</button>
+                            <button id="generatepasscopy">Copy</button>
+                        </div>
+                    </div>
+                    <div class="generatepasscustomlength">
+                        <input type="number" min='1' max='32' id="generatepasslengthvalue">
+                        <input type="range" min="1" max="32" id="generatepasslengthslider">
+                    </div>
+                    <div class="generatepassconfig">
+                        <div class="generatepasscustompassconfig">
+                            <input type="text" placeholder="Custom Text" id="generatepasscustompass" maxlength="48"></input>
+                            <button id="generatepasscustomplacement">At the start</button>
+                        </div>
+                        <div class="generatepasscheckboxconfig">
+                            <div class="generatepasslower">
+                                <a class="fa-solid fa-square-check" id="generatepasslowercheckbox"></a>
+                                <p id="generatepasslowertext">LowerCase</p>
+                            </div>
+                            <div class="generatepassupper">
+                                <a class="fa-solid fa-square-check" id="generatepassuppercheckbox"></a>
+                                <p id="generatepassuppertext">UpperCase</p>
+                            </div>
+                            <div class="generatepassinteger">
+                                <a class="fa-solid fa-square-check" id="generatepassintegercheckbox"></a>
+                                <p id="generatepassintegertext">Numbers</p>
+                            </div>
+                            <div class="generatepassspecial">
+                                <a class="fa-solid fa-square-check" id="generatepassspecialcheckbox"></a>
+                                <p id="generatepassspecialtext">Symbols</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="checkpasswordnow">
+                <div class="checkpasswordnowcontainer">
+                    <p id="checkpasswordnow">Do you think your password is secure enough? Click the "Check" button now!</p>
+                    <a href='home.html' id="checkpasswordnowbutton">Check</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="passgen.js"></script>
+</body>
+</html>

@@ -1,0 +1,1330 @@
+/*-------------------------------------------- Configuration on every page: --------------------------------------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Share Tech", sans-serif;
+}
+
+#navbar {
+    position: fixed;
+    display: inline-flex;
+    justify-content: space-between;
+    overflow: hidden;
+    z-index: 1;
+    width: 100%;
+    padding-inline: 10px;
+    background: rgb(5, 0, 15);
+    padding-inline: 10px;
+    color: white;
+}
+
+.logocontainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+}
+
+#logo {
+    color:white;
+    font-size: 50px;
+}
+
+#logo:hover {
+    color: rgb(209, 209, 209);
+    cursor: pointer;
+}
+
+#logoblinker {
+    height: 50px;
+    margin-left: 5px;
+    animation: blinker 1.7s step-start infinite;
+}
+
+@keyframes blinker {
+    50% { opacity: 0}
+}
+
+.navlinks {
+    display: inline-flex;
+    list-style: none;
+    justify-content: space-between;
+    font-size: 22px;
+    position: relative;
+    align-items: center;
+}
+
+.navlink {
+    position: relative;
+    color: white;
+    padding-block: 18px;
+    padding-inline: 28px;
+}
+
+.navlink:hover {
+    color: rgb(168, 168, 168);
+    background: linear-gradient(180deg, rgba(180, 180, 180, 0.2), rgba(255, 255, 255, 0.2));
+}
+
+#barlinks {
+    color: white;
+    font-size: 24px;
+    bottom: 100vw;
+    display: none;
+}
+
+#barlinks:hover {
+    cursor: pointer;
+    color: rgb(209, 209, 209);
+}
+
+@media (max-width: 1000px) {
+    #barlinks {
+        position: absolute;
+        display: flex;
+        right: 10px;
+        top: 1px;
+    }
+
+    #logoblinker {
+        height: 24px;
+        margin-block: 2px;
+    }
+
+    #logo {
+        font-size: 24px;
+    }
+
+    .navlinks {
+        display: none;
+        flex-direction: column;
+    }
+
+    .navlinks.active {
+        display: flex;
+    }
+
+    .navlink {
+        font-size: 12px;
+        padding-inline: 100%;
+    }
+
+    #navbar {
+        flex-direction: column;
+    }
+}
+
+/*-------------------------------------------- home.html --------------------------------------------*/
+
+.homecontainer {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    background-image: url("passgen_directory/container.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+@media (max-width: 550px) {
+    .homecontainer {
+        position: fixed;
+        background: rgb(5, 0, 15);
+    }
+}
+
+.homeintroduction {
+    display: flex;
+    justify-content: space-between;
+    gap: 6%;
+    padding: 3%;
+    padding-top: 60px;
+    background: transparent;
+    background:rgb(5, 0, 15);
+}
+
+#authorintroduction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    place-content: center;
+    gap: 7%;
+    font-size: 2.5vw;
+    color: rgb(255, 255, 255);
+    background-image: url("passgen_directory/container.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 1.3%;
+    border-radius: 2vw;
+    border: none;
+}
+
+.medialinks {
+    display: flex;
+    place-content: center;
+    gap: 1.5vw;
+    font-size: 3vw;
+}
+
+.medialinks > a {
+    color: white;
+}
+
+.medialinks > a:hover {
+    color: rgb(202, 202, 202);
+}
+
+.homeintroparagraph {
+    color: white;
+    background-image: url("passgen_directory/container.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-size: 1.6vw;
+    border-radius: 1vw;
+    padding: 1.5vw;
+}
+
+@media (max-width: 700px) {
+    .medialinks {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .medialinks > a {
+        font-size: 6vw;
+    }
+
+    .homeintroparagraph {
+        font-size: 2.2vw;
+    }
+}
+
+.homepasswordchecker {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background-image: url("passgen_directory/container.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.passwordcheckercontainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5vw;
+    background:rgb(5, 0, 15);
+    border-radius: 3vw;
+    width: 80%;
+    margin: 6%;
+    margin-inline: 10%;
+    padding: 3%;
+}
+
+#passwordcheckerintro {
+    font-size: 5vw;
+    font-weight: 600;
+    color: white;
+}
+
+.passwordcheckerui {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 6%;
+    width: 80%;
+    background:rgb(12, 24, 82);
+    border-radius: 3vw;
+    color: white;
+}
+
+@media (max-width: 700px) {
+    .passwordcheckercontainer {
+        width: 100%;
+        border-radius: 0;
+        margin: 0;
+    }
+
+    .passwordcheckerui {
+        width: 100%
+    }
+}
+
+.passworduserui {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.passworduserui > a {
+    position: relative;
+    font-size: 25px;
+    place-self: center;
+    color: rgb(5, 0, 15);
+}
+
+.passworduserui > a:hover {
+    color: rgba(5, 0, 15, 0.5);
+    cursor: pointer;
+}
+
+#showpassword {
+    display: flex;
+}
+
+#showpassword.active {
+    display: none;
+}
+
+#hidepassword {
+    display: none;
+}
+
+#hidepassword.active {
+    display: flex;
+}
+
+#passworduserinput {
+    font-size: 20px;
+    padding-left: 10px;
+    background:rgb(5, 0, 15);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    place-content: center;
+    width: 300px;
+    height: 50px;
+}
+
+@media (max-width: 500px) {
+    #passworduserinput {
+        width: 60vw;
+    }
+}
+.passwordcheckerstrength {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    color: white;
+}
+
+.passwordcheckerstrengthindicator {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    place-items: center;
+    gap: 5px;
+}
+
+@media (max-width: 645px) {
+    #homefiller {
+        position: relative;
+        background: rgb(5, 0, 15);
+        width: 100%;
+        height: 101px;
+    }
+}
+
+/* ----- Strength indicator bars configuration: ----- */
+
+.passwordcheckerstrengthindicator > span {
+    position: relative;
+    background: rgb(145, 145, 145);
+    width: 50px;
+    height: 3px;
+}
+
+@media (max-width: 420px) {
+    .passwordcheckerstrengthindicator {
+        gap: 3px;
+    }
+    .passwordcheckerstrengthindicator > span {
+        width: 10vw;
+    }
+}
+
+/* Very weak password: */
+
+#passwordcheckerstrengthindicator1.veryweak {
+    background: rgb(136, 18, 18);
+}
+
+/* Weak password: */
+
+#passwordcheckerstrengthindicator1.weak {
+    background: rgb(196, 133, 39);
+}
+
+#passwordcheckerstrengthindicator2.weak {
+    background: rgb(196, 133, 39);
+}
+
+/* Medium password: */
+
+#passwordcheckerstrengthindicator1.medium {
+    background: rgb(148, 189, 38);
+}
+
+#passwordcheckerstrengthindicator2.medium {
+    background: rgb(148, 189, 38);
+}
+
+#passwordcheckerstrengthindicator3.medium {
+    background: rgb(148, 189, 38);
+}
+
+/* Strong password: */
+
+#passwordcheckerstrengthindicator1.strong {
+    background: rgb(17, 97, 14);
+}
+
+#passwordcheckerstrengthindicator2.strong {
+    background: rgb(17, 97, 14);
+}
+
+#passwordcheckerstrengthindicator3.strong {
+    background: rgb(17, 97, 14);
+}
+
+#passwordcheckerstrengthindicator4.strong {
+    background: rgb(17, 97, 14);
+}
+
+/* ----- Strength indicator text configuration: ----- */
+
+.passwordcheckerinputlength {
+    display: flex;
+    position: relative;
+    width: 198px;
+    gap: 5px;
+    padding-bottom: 30px;
+}
+
+@media (max-width: 420px) {
+    .passwordcheckerinputlength {
+        place-self: start;
+    }
+}
+
+.passwordcheckercharacters {
+    display: flex;
+    gap: 30px;
+}
+
+.passwordcheckercharacters > p {
+    color: rgb(145, 145, 145);
+}
+
+#passwordcheckforupper.active {
+    color: rgb(0, 248, 0);
+}
+
+#passwordcheckforlower.active {
+    color: rgb(0, 248, 0);
+}
+
+#passwordcheckforinteger.active {
+    color: rgb(0, 248, 0);
+}
+
+#passwordcheckforspecial.active {
+    color: rgb(0, 248, 0);
+}
+
+@media (max-width: 500px) {
+    .passwordcheckercharacters {
+        display: flex;
+        flex-direction: column;
+        place-self: start;
+        gap: 0px;
+    }
+}
+
+#passwordcheckforupper {
+    display: flex;
+    gap: 10px;
+}
+
+#passwordcheckforlower {
+    display: flex;
+    gap: 10px;
+}
+
+#passwordcheckforinteger {
+    display: flex;
+    gap: 10px;
+}
+
+#passwordcheckforspecial {
+    display: flex;
+    gap: 10px;
+}
+
+#passwordindicatorinfo {
+    padding-top: 12vw;
+    text-align: center;
+}
+
+@media (max-width: 500px) {
+    #passwordindicatorinfo {
+        padding-top: 2vw;
+    }
+}
+
+#passwordtextindicator.veryweak {
+    color: rgb(136, 18, 18);
+}
+
+#passwordtextindicator.weak {
+    color: rgb(196, 133, 39);
+}
+
+#passwordtextindicator.medium {
+    color: rgb(148, 189, 38);
+}
+
+#passwordtextindicator.strong {
+    color: rgb(17, 97, 14);
+}
+
+/* ----- home.html and cyberhygiene.html configuration: ----- */
+
+.generatepasswordnow {
+    position: relative;
+    display: flex;
+    place-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 40vw;
+    background: rgb(5, 0, 15);
+}
+
+@media (max-width: 500px) {
+    .generatepasswordnow {
+        height: 60vw;
+    }
+}
+
+.generatepasswordnowcontainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    background-image: url("passgen_directory/container.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    width: 90vw;
+    border-radius: 3vw;
+    gap: 5vw;
+    padding: 4vw;
+    color: white;
+}
+
+#generatepasswordnow {
+    position: relative;
+    font-size: 5.2vw;
+    text-align: center;
+}
+
+#generatepasswordnowbutton {
+    position: relative;
+    font-size: 6vw;
+    background:rgb(5, 0, 15);
+    border-radius: 2vw;
+    place-self: center;
+    text-align: center;
+    width: 40%;
+    padding-block: 1vw;
+    color: white;
+}
+
+#generatepasswordnowbutton:hover {
+    background:rgb(11, 4, 24);
+    color:rgb(168, 168, 168);
+}
+
+#generatepasswordnowbutton:active {
+    filter: invert(1);
+}
+
+@media (max-width: 500px) {
+    #generatepasswordnowbutton {
+        font-size: 18vw;
+        width: 100%;
+    }
+}
+
+/*-------------------------------------------- generate.html --------------------------------------------*/
+
+.genpasscontainer {
+    display: flex;
+    flex-direction: column;
+    background-image: url("passgen_directory/container.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+.genpassintro {
+    position: relative;
+    display: flex;
+    background:rgb(5, 0, 15);
+    padding: 3%;
+    justify-content: space-between;
+    gap: 5%;
+    padding-top: 60px;
+}
+
+#genpassintroimg {
+    position: relative;
+    width: 30%;
+    height: 30%;
+    border-radius: 2vw;
+}
+
+#genpassintrotext {
+    position: relative;
+    background-image: url("passgen_directory/container.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    border-radius: 2vw;
+    color: white;
+    font-size: 3vw;
+    padding: 1%;
+}
+
+@media (max-width: 500px) {
+    #genpassintroimg {
+        width: 40%;
+        height: 40%;
+    }
+
+    #genpassintrotext {
+        font-size: 12px;
+    }
+}
+
+.genpassgeneratecontainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5vw;
+    margin: 6%;
+    margin-inline: 10%;
+    padding: 3%;
+    background: rgb(5, 0, 15);
+    border-radius: 2vw;
+    color: white;
+}
+
+#genpassgeneratetitle {
+    position: relative;
+    font-size: 6vw;
+    font-weight: 600;
+}
+
+.genpassinstruction {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    background-image: url("passgen_directory/container.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding-block: 2vw;
+    border-radius: 2vw;
+}
+
+#genpassinstructiontitle {
+    font-size: 48px;
+}
+
+#genpassinstructioninfo {
+    position: relative;
+    width: 90%;
+}
+
+.genpassgenerateui {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    background:rgb(12, 24, 82);
+    border-radius: 2vw;
+    align-items: center;
+    padding: 6%;
+    gap: 5vw;
+}
+
+.generatepassgenerated {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1vw;
+}
+
+.generatepassoutputbar {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    place-items: center;
+    place-content: end;
+    overflow: hidden;
+    gap: 5px;
+    background: rgb(5, 0, 15);
+    padding-inline: 1%;
+    width: 100%;
+    height: 70px;
+    border-radius: 12px;
+}
+
+#generatepassoutputtext {
+    position: relative;
+    font-size: 40px;
+    padding-right: 10px;
+}
+
+#generatepassoutputblinker {
+    position: absolute;
+    background: white;
+    border: none;
+    width: 4px;
+    height: 50px;
+    animation: blinker 1.7s step-start infinite;
+}
+
+.generatepassgeneratedbutton {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.generatepassgeneratedbutton > button {
+    width: 49%;
+    height: 50px;
+    overflow: hidden;
+    background: rgb(5, 0, 15);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 32px;
+}
+
+.generatepassgeneratedbutton > button:hover {
+    background: rgba(5, 0, 15, 0.925);
+    color: rgb(168, 168, 168);
+    cursor: pointer;
+}
+
+.generatepassgeneratedbutton > button:active {
+    filter: invert(1);
+}
+
+.generatepasscustomlength {
+    position: relative;
+    display :flex;
+    justify-content: space-between;
+    gap: 5px;
+    width: 100%;
+}
+
+#generatepasslengthvalue {
+    position: relative;
+    color: white;
+    background: rgb(5, 0, 15);
+    border: none;
+    border-radius: 8px;
+    font-size: 20px;
+    width: 48px;
+    height: 28px;
+    text-align: center;
+}
+
+#generatepasslengthvalue::-webkit-outer-spin-button,
+#generatepasslengthvalue::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+#generatepasslengthvalue[type=number] {
+    -moz-appearance: textfield;
+}
+
+#generatepasslengthslider {
+    width: 93%;
+    appearance: none;
+    height: 8px;
+    border-radius: 5px;
+    background: rgb(5, 0, 15);
+    margin-block: 10px;
+}
+
+#generatepasslengthslider::-webkit-slider-thumb {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: rgb(25, 3, 36);
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+#generatepasslengthslider::-moz-range-thumb {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: rgb(25, 3, 36);
+    border-radius: 100%;
+    border: none;
+    cursor: pointer;
+}
+
+@media (max-width: 700px) {
+    .generatepassoutputbar {
+        height: 50px;
+    }
+
+    #generatepassoutputtext {
+        font-size: 24px;
+    }
+
+    #generatepassoutputblinker {
+        height: 30px;
+    }
+
+    .generatepassgeneratedbutton > button {
+        font-size: 19.2px;
+    }
+
+    .genpassgeneratecontainer {
+        width: 100%;
+        margin: 0;
+        border-radius: 0;
+        padding: 0;
+        padding-top: 2%;
+    }
+}
+
+.generatepassconfig {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    place-self: start;
+}
+
+@media (max-width: 600px) {
+    .generatepassconfig {
+        gap: 10px;
+    }
+}
+
+.generatepasscustompassconfig {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#generatepasscustompass {
+    font-size: 20px;
+    padding-left: 10px;
+    background:rgb(5, 0, 15);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    place-content: center;
+    width: 100%;
+    height: 50px;
+}
+
+#generatepasscustomplacement {
+    font-size: 20px;
+    background:black;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    place-content: center;
+    width: 100%;
+    height: 30px;
+    overflow: hidden;
+}
+
+@media (max-width: 420px) {
+    .genpassinstruction {
+        font-size: 12px;
+    }
+
+    #genpassinstructiontitle {
+        font-size: 12px;
+    }
+
+    #generatepasscustomplacement {
+        font-size: 12px;
+    }
+}
+
+#generatepasscustomplacement:hover {
+    background:rgba(0, 0, 0, 0.76);
+    color:rgb(168, 168, 168);
+    cursor: pointer;
+}
+
+#generatepasscustomplacement:active {
+    filter: invert(1);
+}
+
+.generatepasscheckboxconfig {
+    position: relative;
+    display: grid;
+    grid-template-columns: 12vw auto;
+    grid-row-gap: 2vw;
+    font-size: 20px;
+    color: rgb(0, 248, 0);
+}
+
+#generatepasslowercheckbox:hover {
+    color: rgb(168, 168, 168);
+    cursor: pointer;
+}
+
+#generatepassuppercheckbox:hover {
+    color: rgb(168, 168, 168);
+    cursor: pointer;
+}
+
+#generatepassintegercheckbox:hover {
+    color: rgb(168, 168, 168);
+    cursor: pointer;
+}
+
+#generatepassspecialcheckbox:hover {
+    color: rgb(168, 168, 168);
+    cursor: pointer;
+}
+
+#generatepasslowercheckbox:active {
+    filter: invert(1);
+    cursor: pointer;
+}
+
+#generatepassuppercheckbox:active {
+    filter: invert(1);
+    cursor: pointer;
+}
+
+#generatepassintegercheckbox:active {
+    filter: invert(1);
+    cursor: pointer;
+}
+
+#generatepassspecialcheckbox:active {
+    filter: invert(1);
+    cursor: pointer;
+}
+
+/* ----- Password Generator Customize Configuration: ----- */
+
+.generatepasslower {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.generatepasslower.disable {
+    color:rgb(145, 145, 145);
+}
+
+.generatepassupper {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.generatepassupper.disable {
+    color:rgb(145, 145, 145);
+}
+
+
+.generatepassinteger {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.generatepassinteger.disable {
+    color:rgb(145, 145, 145);
+}
+
+.generatepassspecial {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.generatepassspecial.disable {
+    color:rgb(145, 145, 145);
+}
+
+
+@media (max-width: 1150px) {
+    .generatepasscheckboxconfig {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 800px) {
+    .generatepasscheckboxconfig {
+        display: flex;
+        flex-direction: column;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 300px) {
+    .generatepasscheckboxconfig {
+        font-size: 10px;
+    }
+}
+
+.checkpasswordnow {
+    position: relative;
+    display: flex;
+    place-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 40vw;
+    background: rgb(5, 0, 15);
+}
+
+@media (max-width: 500px) {
+    .checkpasswordnow {
+        height: 60vw;
+    }
+}
+
+.checkpasswordnowcontainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    background-image: url("passgen_directory/container.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    width: 90vw;
+    border-radius: 3vw;
+    gap: 5vw;
+    padding: 4vw;
+    color: white;
+}
+
+#checkpasswordnow {
+    position: relative;
+    font-size: 5.2vw;
+    text-align: center;
+}
+
+#checkpasswordnowbutton {
+    position: relative;
+    font-size: 6vw;
+    background:rgb(5, 0, 15);
+    border-radius: 2vw;
+    place-self: center;
+    text-align: center;
+    width: 40%;
+    padding-block: 1vw;
+    color: white;
+}
+
+#checkpasswordnowbutton:hover {
+    background:rgb(11, 4, 24);
+    color:rgb(168, 168, 168);
+}
+
+#checkpasswordnowbutton:active {
+    filter: invert(1);
+}
+
+@media (max-width: 500px) {
+    #checkpasswordnowbutton {
+        font-size: 18vw;
+        width: 100%;
+    }
+}
+
+/*-------------------------------------------- cyberhygiene.html --------------------------------------------*/
+
+.cyberhygienecontainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-image: url("passgen_directory/container.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.cyberhygieneinfo {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-image: url("passgen_directory/container.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.whatcyberhygiene {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 3%;
+    padding-top: 60px;
+    background: rgb(5, 0, 15);
+    gap: 5%;
+}
+
+.whatiscyberhygieneintro {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1.7vw;
+    background-image: url("passgen_directory/container.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    border-radius: 2vw;
+    color: white;
+    padding: 1.5%;
+    font-size: 1vw;
+}
+
+.whatiscyberhygieneintro > #introtitle {
+    font-size: 4vw;
+}
+
+#whatiscyberhygieneimg {
+    position: relative;
+    width: 30vw;
+    height: 20vw;
+    border-radius: 2vw;
+}
+
+@media (max-width: 1200px) {
+    .whatiscyberhygieneintro {
+        font-size: 12px;
+        gap: 20px;
+    }
+
+    .whatiscyberhygieneintro > #introtitle {
+        font-size: 24px;
+    }
+
+    #whatiscyberhygieneimg {
+        display: none;
+    }
+}
+
+.whycyberhygiene {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 3%;
+    background-image: url("passgen_directory/whycyberhygiene.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    gap: 5%;
+}
+
+.whycyberhygieneinfo {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1.7vw;
+    background: rgb(5, 0, 15);
+    color: white;
+    padding: 1%;
+    font-size: 1.3vw;
+    border-radius: 2vw;
+}
+
+.whycyberhygieneinfo > #introtitle {
+    font-size: 4vw;
+}
+
+.whycyberhygienelist {
+    padding-left: 15px;
+}
+
+@media (max-width: 1200px) {
+    .whycyberhygieneinfo {
+        font-size: 12px;
+        gap: 20px;
+    }
+
+    .whycyberhygieneinfo > #introtitle {
+        font-size: 24px;
+    }
+}
+
+.bestpracticecyberhygiene {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-image: url("passgen_directory/bestpracticeimg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.bestpracticecyberhygieneheading {
+    position: relative;
+    display: flex;
+    padding: 3%;
+    color: white;
+    justify-content: space-between;
+    background: rgb(5, 0, 15);
+    gap: 5%;
+}
+
+.bestpracticecyberhygieneintro {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-image: url("passgen_directory/container.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 1%;
+    border-radius: 2vw;
+    font-size: 1vw;
+    gap: 1.7vw;
+}
+
+.bestpracticecyberhygieneintro > #title {
+    font-size: 4vw;
+}
+
+#bestpracticecyberhygieneimg {
+    position: relative;
+    width: 14%;
+    border-radius: 2vw;
+}
+
+@media (max-width: 1200px) {
+    .bestpracticecyberhygieneintro {
+        font-size: 12px;
+        gap: 20px;
+    }
+
+    .bestpracticecyberhygieneintro > #title {
+        font-size: 24px;
+    }
+
+    #bestpracticecyberhygieneimg {
+        display: none;
+    }
+}
+
+.bestpracticelistwrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-image: url("passgen_directory/bestpracticeimg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.bestpracticelistcontainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: rgb(5, 0, 15);
+    color: white;
+    margin: 3%;
+    padding: 1%;
+    font-size: 1.3vw;
+    border-radius: 2vw;
+}
+
+.bestpracticecyberhygienelist {
+    padding-left: 15px;
+}
+
+@media (max-width: 1200px) {
+    .bestpracticecyberhygienelist {
+        font-size: 12px;
+    }
+}
+
+#cyberhygienedivider {
+    position: relative;
+    width: 100%;
+    height: 4vw;
+    background: rgb(5, 0, 15);
+}
+
+.summarycyberhygienewrapper {
+    position: relative;
+    background-image: url("passgen_directory/cyberhygienesummary.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 3%;
+    color: white;
+}
+
+.summarycyberhygienecontainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: rgb(5, 0, 15);
+    padding: 1%;
+    border-radius: 2vw;
+    gap: 1.7vw;
+    font-size: 1.3vw;
+}
+
+.summarycyberhygienecontainer > #summarytitle {
+    font-size: 4vw;
+}
+
+@media (max-width: 1200px) {
+    .summarycyberhygienecontainer {
+        font-size: 12px;
+        gap: 20px;
+    }
+
+    .summarycyberhygienecontainer > #summarytitle {
+        font-size: 24px;
+    }
+}

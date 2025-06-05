@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+            <div class="logocontainer">
+                <a id="logo" href="home.html">Password Generator</a>
+                <button id="logoblinker"></button>
+            </div>
+            <a class="fa-solid fa-bars" id="barlinks"></a>
+            <ul class="navlinks">
+                <a class="navlink" id="homelink" href="home.html">Home</a>
+                <a class="navlink" id="generatelink" href="generate.html">Generate</a>
+                <a class="navlink" id="cyberhygienelink" href="cyberhygiene.html">Cyber_Hygiene</a>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <div class="homecontainer">
+            <div class="homeintroduction">
+                <button id="authorintroduction">
+                    <p>Creator:</p>
+                    <p>Uldrick</p>
+                    <span class="medialinks">
+                        <a href='https://www.linkedin.com/in/uldrick-alarcon-bab173358/' target="about:blank" class="fa-brands fa-linkedin" id="linkedinlink"></a>
+                        <a href='https://github.com/takkyyon' target="about:blank" class="fa-brands fa-github" id="githublink"></a>
+                    </span>
+                </button>
+                <p class="homeintroparagraph">Welcome to Password Generator! It
+                is important to keep all of your accounts safe with secure
+                passwords. In today's rapidly evolving digital age,
+                cybercriminals are becoming increasingly sophisticated in
+                cracking passwords.</p>
+                <p class="homeintroparagraph">Down below is a password strength
+                checker that determines how strong is your current password. It
+                is recommended to alter your current password if the password
+                strength checker determines that it is weak. Give it a go!</p>
+            </div>
+            <div class="homepasswordchecker">
+                <div class="passwordcheckercontainer">
+                    <p id="passwordcheckerintro">How strong is your password?</p>
+                    <div class="passwordcheckerui">
+                        <div class="passworduserui">
+                            <input type='password' placeholder='Enter a Password!' id="passworduserinput"></input>
+                            <a class="fa-solid fa-eye" id="showpassword"></a>
+                            <a class="fa-solid fa-eye-slash" id="hidepassword"></a>
+                        </div>
+                        <div class="passwordcheckerstrength">
+                            <p>Password Strength:</p>
+                            <div class='passwordcheckerstrengthindicator'>
+                                <span id="passwordcheckerstrengthindicator1"></span>
+                                <span id="passwordcheckerstrengthindicator2"></span>
+                                <span id="passwordcheckerstrengthindicator3"></span>
+                                <span id="passwordcheckerstrengthindicator4"></span>
+                            </div>
+                        </div>
+                        <div class="passwordcheckerinputlength">
+                            <p>Length:</p>
+                            <p id="passwordcheckeruserinputlength"></p>
+                        </div>
+                        <div class="passwordcheckercharacters">
+                            <p id="passwordcheckforupper"><i class="fa-solid fa-square-check" id="checkforuppercheckbox"></i>Upper</p>
+                            <p id="passwordcheckforlower"><i class="fa-solid fa-square-check" id="checkforlowercheckbox"></i>Lower</p>
+                            <p id="passwordcheckforinteger"><i class="fa-solid fa-square-check" id="checkforintegercheckbox"></i>Number</p>
+                            <p id="passwordcheckforspecial"><i class="fa-solid fa-square-check" id="checkforspecialcheckbox"></i>Special</p>
+                        </div>
+                        <div id="passwordindicatorinfo">Type a password to determine how secure it is.<a id="passwordtextindicator"></a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="generatepasswordnow">
+                <div class="generatepasswordnowcontainer">
+                    <p id="generatepasswordnow">Are you ready to generate a password? Click the "Generate" button now!</p>
+                    <a href='generate.html' id="generatepasswordnowbutton">Generate</a>
+                </div>
+            </div>
+            <div id="homefiller"></div>
+        </div>
+    </section>
+    <script src="passgen.js"></script>
+</body>
+</html>

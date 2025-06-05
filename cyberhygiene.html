@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+            <div class="logocontainer">
+                <a id="logo" href="home.html">Password Generator</a>
+                <button id="logoblinker"></button>
+            </div>
+            <a class="fa-solid fa-bars" id="barlinks"></a>
+            <ul class="navlinks">
+                <a class="navlink" id="homelink" href="home.html">Home</a>
+                <a class="navlink" id="generatelink" href="generate.html">Generate</a>
+                <a class="navlink" id="cyberhygienelink" href="cyberhygiene.html">Cyber_Hygiene</a>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <div class="cyberhygienecontainer">
+            <div class="cyberhygieneinfo">
+                <div class="whatcyberhygiene">
+                    <img id="whatiscyberhygieneimg"
+                    src="passgen_directory/whatiscyberhygiene.jpg" alt="What
+                    is Cyberhygiene Image">
+                    <div class="whatiscyberhygieneintro">
+                        <p id="introtitle">What is Cyber Hygiene?</p>
+                        <p>Cyber hygiene refers to the routine practices and
+                        preventive measures that individuals and organizations
+                        adopt to maintain the security, integrity, and
+                        efficiency of their digital environments. Just as
+                        personal hygiene involves regular habits like brushing
+                        teeth and washing hands to prevent illness, cyber
+                        hygiene consists of consistent behaviors that protect
+                        against cyber threats such as malware, data breaches,
+                        and identity theft. It encompasses both technical
+                        safeguards (like software updates and firewalls) and
+                        behavioral habits (like avoiding suspicious
+                        emails).<br><br>A strong cyber hygiene regimen ensures
+                        that devices, networks, and online accounts remain
+                        secure, reducing vulnerabilities that cybercriminals
+                        could exploit. Without proper cyber hygiene, systems
+                        become easy targets for attacks, leading to financial
+                        losses, data leaks, and operational disruptions.</p>
+                    </div>
+                </div>
+                <div class="whycyberhygiene">
+                    <div class="whycyberhygieneinfo">
+                        <p id="introtitle">Why is it important?</p>
+                        <ul class="whycyberhygienelist">
+                            <li>Prevents Cyberattacks:<br>Cybercriminals constantly
+                            seek weaknesses in systems—outdated software, weak
+                            passwords, or unsecured networks—to launch attacks.
+                            Good cyber hygiene closes these gaps, making it
+                            harder for hackers to infiltrate systems. For
+                            example, regularly updating software patches known
+                            security flaws, while strong passwords prevent
+                            brute-force attacks.<br><br></li>
+                            <li>Protects Sensitive Data:<br>Personal, financial, and
+                            business data are prime targets for theft. Poor
+                            cyber hygiene (Such as reusing passwords, neglecting
+                            encryption) increases the risk of data breaches.
+                            Proper security measures, such as encryption and
+                            access controls, ensure that even if data is
+                            intercepted, it remains unreadable and unusable to
+                            attackers.<br><br></li>
+                            <li>Maintains System Performance:<br>Malware and viruses
+                            can slow down devices, corrupt files, and cause
+                            crashes. Regular scans, updates, and proper file
+                            management keep systems running smoothly. For
+                            instance, removing unnecessary software reduces
+                            attack surfaces, while antivirus programs detect and
+                            eliminate threats before they cause damage.<br><br></li>
+                            <li>Ensures Compliance with Regulations:<br>Many
+                            industries such as healthcare, finance, or governments have
+                            strict cybersecurity regulations (Like the GDPR or
+                            HIPAA). Poor cyber hygiene can lead to legal
+                            penalties, fines, and loss of customer trust.
+                            Implementing best practices helps organizations stay
+                            compliant and avoid legal repercussions.<br><br></li>
+                            <li>Minimizes Financial and Reputational Damage:<br>
+                            Cyber incidents can be costly—ransomware payments,
+                            forensic investigations, and lost business due to
+                            downtime harm finances. Additionally, data breaches
+                            erode customer trust and damage an organization's
+                            reputation. Proactive cyber hygiene reduces the
+                            likelihood of such incidents, saving money and
+                            preserving credibility.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bestpracticecyberhygiene">
+                    <div class="bestpracticecyberhygieneheading">
+                        <div class="bestpracticecyberhygieneintro">
+                            <p id="title">Best Practices for Cyber Hygiene:</p>
+                            <p id="subtitle">To avoid cyber threats and maintain
+                            the security and integrity of your personal or
+                            sensitive credentials, it is crucial to adopt a
+                            proactive approach to cybersecurity. Cybercriminals
+                            are constantly evolving their tactics, making it
+                            essential to stay vigilant and implement strong
+                            protective measures. Whether you're managing
+                            personal accounts, business data, or financial
+                            information, following cybersecurity best practices
+                            can significantly reduce your risk of falling victim
+                            to hacking, identity theft, or data breaches. Here
+                            are some of the most effective strategies to keep
+                            your digital life secure:</p>
+                        </div>
+                        <img id="bestpracticecyberhygieneimg" src="passgen_directory/bestpracticeintroimg.jpg">
+                    </div>
+                    <div class="bestpracticelistwrapper">
+                        <div class="bestpracticelistcontainer">
+                            <ul class="bestpracticecyberhygienelist">
+                                <li>Strong Password Management:<br>Create complex, unique
+                                passwords combining uppercase/lowercase letters,
+                                numbers, and symbols (Something like "P@ssw0rd!2024") to prevent
+                                brute-force attacks. Enable Multi-Factor Authentication
+                                (MFA) for an added security layer, requiring a second
+                                verification step like an SMS code or biometric scan.
+                                Since managing multiple passwords is challenging, use a
+                                password manager to securely store credentials and
+                                generate strong passwords automatically.<br><br></li>
+                                <li>Regular Software Updates:<br>Cybercriminals frequently
+                                exploit vulnerabilities in outdated software. Enable
+                                automatic updates for operating systems, browsers, and
+                                applications to ensure timely security patches.
+                                Additionally, update firmware on routers, IoT devices,
+                                and hardware, as they often contain critical fixes that
+                                prevent exploits.<br><br></li>
+                                <li>Secure Network Practices:<br>Avoid using public Wi-Fi
+                                for sensitive activities, as these networks are often
+                                unsecured and vulnerable to man-in-the-middle attacks—if
+                                necessary, use a VPN to encrypt your connection. For
+                                home networks, change default router passwords, enable
+                                WPA3 encryption, and hide your SSID to deter
+                                unauthorized access.<br><br></li>
+                                <li>Data Backup and Encryption:<br>Protect against ransomware
+                                and hardware failures by maintaining regular automated
+                                backups following the 3-2-1 rule: keep three copies of
+                                data, on two different media types, with one stored
+                                offsite (e.g., cloud + external drive). Additionally,
+                                encrypt sensitive files and use full-disk encryption
+                                (e.g., BitLocker, FileVault) to prevent unauthorized
+                                access if devices are lost or stolen.<br><br></li>
+                                <li>Phishing and Social Engineering Awareness:<br>
+                                Cybercriminals often impersonate trusted entities via
+                                email or messages. Always verify links by hovering over
+                                them to check URLs, and confirm unexpected requests
+                                through official channels before responding. Never
+                                download attachments from unknown sources, as malware
+                                frequently spreads through malicious files disguised as
+                                legitimate documents.<br><br></li>
+                                <li>Device and Account Monitoring:<br>Enable automatic screen
+                                locks on all devices to prevent unauthorized access
+                                during inactivity. Periodically review account login
+                                activity to detect suspicious access—many platforms
+                                (e.g., Google, Facebook) allow users to remotely log out
+                                of inactive sessions.<br><br></li>
+                                <li>Least Privilege Principle:<br>For organizations,limit user access to only
+                                the systems and data necessary for their role. For
+                                example, avoid granting admin rights to employees unless
+                                absolutely required, reducing potential damage if an
+                                account is compromised.<br><br></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <span id="cyberhygienedivider"></span>
+                <div class="summarycyberhygienewrapper">
+                    <div class="summarycyberhygienecontainer">
+                        <p id="summarytitle">What to take away from this:</p>
+                        <p id="summarypara">Cyber hygiene is an essential discipline
+                        in today's digital world, requiring consistent and proactive
+                        measures to safeguard against cyber threats. Its importance
+                        cannot be overstated—neglecting it leads to increased risks
+                        of cyberattacks, data breaches, financial losses, and
+                        reputational harm. By adopting best practices such as strong
+                        passwords, regular updates, secure network usage, data
+                        backups, phishing awareness, and access control, individuals
+                        and organizations can significantly enhance their security
+                        posture. Ultimately, good cyber hygiene is not a one-time
+                        effort but an ongoing commitment to maintaining a safe and
+                        resilient digital environment.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="generatepasswordnow">
+                <div class="generatepasswordnowcontainer">
+                    <p id="generatepasswordnow">Are you ready to generate a
+                    password? Click the "Generate" button now!</p>
+                    <a href='generate.html' id="generatepasswordnowbutton">Generate</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="passgen.js"></script>
+</body>
+</html>
